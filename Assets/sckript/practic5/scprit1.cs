@@ -6,25 +6,27 @@ using TMPro;
 
 public class scprit1 : MonoBehaviour
 {
-    public void Calculate()
+    int temp2 = 0;
+    int arrat = 0;
+    int temp = 0;
+    int[] array = new int[14];
+    public void first()
     {
-        int[] deapozon = new int[17];
-        for (int i = 0; i < deapozon.Length; i++)
+        for (int i = 7; i < 22;i++ )
         {
-            if (i > 0)
+            if(i % 2 == 0)
             {
-            deapozon[i] = 6 + i;
-            int value = deapozon[i];
-            if (value <= 21 && value % 2 == 0)
-            {
-                deapozon[0] += value;
-            }
-            if (i == deapozon.Length - 1)
-            {
-                Debug.Log($"ответ:{i}");
-            } 
+                temp = i;
+                array[arrat] = temp;
+                arrat++;
             }
         }
+    //Debug.Log(String.Join(", ", array));
+        for (int i = 0; i < arrat; i++)
+        {
+        temp = array[i];
+        temp2 = temp + temp2;
+        }
+        Debug.Log(temp2);
     }
-
 }
