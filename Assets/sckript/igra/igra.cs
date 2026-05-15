@@ -11,6 +11,7 @@ public class igra : MonoBehaviour
 
     public UnityEngine.UI.Button[] game;
     public UnityEngine.UI.Button start2;
+    public UnityEngine.UI.Button start3;
     public UnityEngine.UI.Button gameover;
     public Stats stats;
     int counter = 0;
@@ -20,7 +21,6 @@ public class igra : MonoBehaviour
         {
             buttons[i].gameObject.SetActive(false);
         }
-        gameover.gameObject.SetActive(false);
     }
     public void StartGame()
     {
@@ -31,6 +31,7 @@ public class igra : MonoBehaviour
         //Debug.Log(1);
         int temp = i;
         gameover.gameObject.SetActive(true);
+        stats.pointerm();
     }
     public void Game()
     {
@@ -50,5 +51,6 @@ public class igra : MonoBehaviour
         }
         start2.gameObject.SetActive(true);
         gameover.gameObject.SetActive(false);
+        stats.pointerm();
     }
 }
