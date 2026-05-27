@@ -17,6 +17,6 @@ public class Record : MonoBehaviour
             temp = record;
             recordText.text = temp.ToString();
         }
-    Debug.Log(temp);
+    //Debug.Log(temp);
     }
 }

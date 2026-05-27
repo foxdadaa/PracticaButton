@@ -8,6 +8,10 @@ public class chelenge : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
     [SerializeField] private TMP_InputField inputField;
+    //public int v1;
+    //public int v2;
+    //public int v3;
+    //[SerializeField] private int[] winValues;
 
     private int randomn;
 
