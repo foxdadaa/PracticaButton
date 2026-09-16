@@ -10,44 +10,46 @@ public GameOver gameover;
 public TMP_Text Namber1;
 public TMP_Text Namber2;
 public TMP_Text Namber3;
-public Button Button1;
-public Button Button2;
-public Button Button3;
+public Button drel;
+public Button molot;
+public Button otm;
 
-public void Drel()
+    public void Drel()
     {
-        int.TryParse(Namber1.text, out int temp);
-        temp = temp + 1;
-        Namber1.text = temp.ToString();
-        int.TryParse(Namber2.text, out temp);
-        temp = temp - 1;
-        Namber2.text = temp.ToString();
-        gameover.proverca();
+        int.TryParse(Namber1.text, out int temp1);
+        temp1 = temp1 + 1;
+        Namber1.text = temp1.ToString();
+        int.TryParse(Namber2.text, out int temp2);
+        temp2 = temp2 - 1;
+        //Debug.Log(temp2);
+        Namber2.text = temp2.ToString();
+        int.TryParse(Namber3.text, out int temp3);
+        gameover.proverca(temp1, temp2, temp3);
     }
-    public void molot()
+    public void Molot()
     {
-        int.TryParse(Namber1.text, out int temp);
-        temp = temp - 1;
-        Namber1.text = temp.ToString();
-        int.TryParse(Namber2.text, out temp);
-        temp = temp + 2;
-        Namber2.text = temp.ToString();
-        int.TryParse(Namber3.text, out temp);
-        temp = temp - 1;
-        Namber3.text = temp.ToString();
-        gameover.proverca();
+        int.TryParse(Namber1.text, out int temp1);
+        temp1 = temp1 - 1;
+        Namber1.text = temp1.ToString();
+        int.TryParse(Namber2.text, out int temp2);
+        temp2 = temp2 + 2;
+        Namber2.text = temp2.ToString();
+        int.TryParse(Namber3.text, out int temp3);
+        temp3 = temp3 - 1;
+        Namber3.text = temp3.ToString();
+        gameover.proverca(temp1, temp2, temp3);
     }
-        public void otm()
+        public void Otm()
     {
-        int.TryParse(Namber1.text, out int temp);
-        temp = temp - 1;
-        Namber1.text = temp.ToString();
-        int.TryParse(Namber2.text, out temp);
-        temp = temp + 1;
-        Namber2.text = temp.ToString();
-        int.TryParse(Namber3.text, out temp);
-        temp = temp + 1;
-        Namber3.text = temp.ToString();
-        gameover.proverca();
+        int.TryParse(Namber1.text, out int temp1);
+        temp1 = temp1 - 1;
+        Namber1.text = temp1.ToString();
+        int.TryParse(Namber2.text, out int temp2);
+        temp2 = temp2 + 1;
+        Namber2.text = temp2.ToString();
+        int.TryParse(Namber3.text, out int temp3);
+        temp3 = temp3 + 1;
+        Namber3.text = temp3.ToString();
+        gameover.proverca(temp1, temp2, temp3);
     }
 }
