@@ -927,8 +927,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715193499}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.000061035156, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -941,11 +941,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715193499}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 946822bd7795a9a4d970684433ed0d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimerText: {fileID: 1454964587}
+  gameover: {fileID: 715193505}
 --- !u!114 &715193504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +967,8 @@ MonoBehaviour:
   drel: {fileID: 1129148709}
   molot: {fileID: 492450835}
   otm: {fileID: 2075198751}
+  replaylose: {fileID: 1630801756}
+  replaywin: {fileID: 1611622675}
 --- !u!114 &715193505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,6 +982,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Winmenu1: {fileID: 1522016551}
+  Timer: {fileID: 715193503}
+  Losemenu: {fileID: 1281192899}
 --- !u!1 &816255943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,8 +1907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 632.8856, y: 351.863}
+  m_AnchoredPosition: {x: -0.0018005, y: -0.00092316}
+  m_SizeDelta: {x: 1241.5, y: 619.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1281192901
 MonoBehaviour:
@@ -2150,8 +2156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 632.8856, y: 351.863}
+  m_AnchoredPosition: {x: -0.001915, y: 0}
+  m_SizeDelta: {x: 1241.4934, y: 619.6504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522016553
 MonoBehaviour:
@@ -2407,7 +2413,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1611622676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 715193504}
+        m_TargetAssemblyTypeName: GamePlay, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1522016551}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 715193503}
+        m_TargetAssemblyTypeName: timer, Assembly-CSharp
+        m_MethodName: restars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1611622676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2528,7 +2570,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1630801757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 715193504}
+        m_TargetAssemblyTypeName: GamePlay, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281192899}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 715193503}
+        m_TargetAssemblyTypeName: timer, Assembly-CSharp
+        m_MethodName: restars
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1630801757
 MonoBehaviour:
   m_ObjectHideFlags: 0

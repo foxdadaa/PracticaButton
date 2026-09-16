@@ -13,6 +13,21 @@ public TMP_Text Namber3;
 public Button drel;
 public Button molot;
 public Button otm;
+public Button replaylose;
+public Button replaywin;
+int random1;
+int random2;
+int random3;
+private void Start()
+    {
+        random1 = Random.Range(1, 8);
+        random2 = Random.Range(1, 8);
+        random3 = Random.Range(1, 8);
+        Namber1.text = random1.ToString();
+        Namber2.text = random2.ToString();
+        Namber3.text = random3.ToString();
+        //Debug.Log(random1);
+    }
 
     public void Drel()
     {
@@ -51,5 +66,9 @@ public Button otm;
         temp3 = temp3 + 1;
         Namber3.text = temp3.ToString();
         gameover.proverca(temp1, temp2, temp3);
+    }
+        public void Replay()
+    {
+        Start();
     }
 }
