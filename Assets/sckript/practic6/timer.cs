@@ -9,6 +9,9 @@ public class timer : MonoBehaviour
     public GameOver gameover;
     private float TimeLeft = 15f;
     private bool game = false;
+    int temp1;
+    int temp2;
+    int temp3;
     public void Start()
     {
         game = true;
@@ -28,8 +31,11 @@ public class timer : MonoBehaviour
         }
         else
         {
+            temp1 = 0;
+            temp2 = 0;
+            temp3 = -1;
             game = false;
-            gameover.lose();
+            gameover.proverca(temp1, temp2, temp3);
         }
     }
 }

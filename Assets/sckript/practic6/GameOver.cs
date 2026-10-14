@@ -15,17 +15,7 @@ public GameObject Losemenu;
         {
             Winmenu1.SetActive(!Winmenu1.activeSelf);
         }
-        else if(temp1 < 0 || temp2 < 0 || temp3 < 0)
-        {
-            lose();
-        }
-        else if(temp1 >= 10 || temp2 >= 10 || temp3 >= 10)
-        {
-            lose();
-        }
-    }
-    public void lose()
-    {
-        //Losemenu.SetActive = 
+        bool isLose = (temp1 <= 0 || temp2 <= 0 || temp3 <= 0) || (temp1 >= 10 || temp2 >= 10 || temp3 >= 10);
+        Losemenu.SetActive(isLose);
     }
 }
